@@ -1,15 +1,19 @@
 # trying to make it generic for any n x n board
-def check_row(row: list):
-    if(row.count(row[0]) == len(row) and row[0] == 'X'):
+def check_row(row):
+    #if(row.count(row[0]) == len(row) and row[0] == 'X'):
+        #return 'X - wins!'
+    #elif(row.count(row[0]) == len(row) and row[0] == 'O'):
+        #return 'O - wins!'
+    if(row[0] == row[1] == row[2] == 'X'):
         return 'X - wins!'
-    elif(row.count(row[0]) == len(row) and row[0] == 'O'):
+    elif(row[0] == row[1] == row[2] == 'O'):
         return 'O - wins!'
     else:
         return None
 
 def check_rows(board):
     for i in range(len(board)):
-        check = check_row[i]
+        check = check_row(board[i])
         if(check):
             return check
     return None

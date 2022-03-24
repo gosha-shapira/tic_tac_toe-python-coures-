@@ -18,12 +18,12 @@ def make_move(char,board):
             print (f'Invalid column chosen {usr_input[1]}')
             print_board (board)
             continue
-        if (board[usr_input[0]][usr_input[1]] != '-'):
+        if (board[usr_input[1]][usr_input[0]] != '-'):
             print('The cell is taken')
             print_board(board)
             continue
         else:
             break
-    board[usr_input[0]][usr_input[1]] = char
+    board[usr_input[1]][usr_input[0]] = char
     print_board(board)
     return board
