@@ -1,8 +1,8 @@
-# currently will work only for 3 x 3
-def check_row(row):
-    if(row[0] == row[1] == row[2] == 'X'):
+# trying to make it generic for any n x n board
+def check_row(row: list):
+    if(row.count(row[0]) == len(row) and row[0] == 'X'):
         return 'X - wins!'
-    elif(row[0] == row[1] == row[2] == 'O'):
+    elif(row.count(row[0]) == len(row) and row[0] == 'O'):
         return 'O - wins!'
     else:
         return None
