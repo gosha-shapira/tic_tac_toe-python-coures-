@@ -29,7 +29,7 @@ def check_cross(board): # only for a 3 x 3 board
     else:
         return None
 
-def Check_board(board: list): # recieving list of lists
+def check_board(board: list): # recieving list of lists
     rows_win = check_rows(board)
     if(rows_win):
         print(rows_win)
