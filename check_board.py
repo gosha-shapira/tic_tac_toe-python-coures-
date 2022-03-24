@@ -16,7 +16,7 @@ def check_rows(board):
 
 def check_col(board):
     for i in range(len(board)):
-        check = check_row([item[i] for item in board])
+        check = check_row([item[i] for item in board]) # turning every column to row and check_row
         if(check):
             return check
     return None
