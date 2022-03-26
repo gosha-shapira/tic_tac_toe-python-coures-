@@ -19,5 +19,6 @@ def tic_tac_toe():
     
     print('It\'s a draw')
 
-if '__init__':
+
+if __name__ == '__main__':
     tic_tac_toe()
